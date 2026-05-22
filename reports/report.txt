@@ -1,0 +1,57 @@
+=== ADVERSARIAL THREAT SURFACE REPORT ===
+
+=== FINDINGS ===
+
+Host: 45.33.32.156
+Port: 22/tcp
+Service: ssh
+Risk: Medium
+Severity: Medium
+Adversarial Score: 5
+MITRE Technique: Brute Force (T1110)
+Remediation: Restrict SSH exposure using firewall rules, disable password authentication, and enforce MFA.
+
+-------------------------
+
+Host: 45.33.32.156
+Port: 80/tcp
+Service: http
+Risk: Info
+Severity: Low
+Adversarial Score: 3
+MITRE Technique: Exploit Public-Facing Application (T1190)
+Remediation: Perform web application assessment and ensure secure configurations.
+
+-------------------------
+
+Host: 45.33.32.156
+Port: 9929/tcp
+Service: nping-echo
+Risk: Unknown
+Severity: Low
+Adversarial Score: 1
+MITRE Technique: Unknown (N/A)
+Remediation: No remediation guidance available.
+
+-------------------------
+
+Host: 45.33.32.156
+Port: 31337/tcp
+Service: tcpwrapped
+Risk: Unknown
+Severity: Low
+Adversarial Score: 1
+MITRE Technique: Unknown (N/A)
+Remediation: No remediation guidance available.
+
+-------------------------
+
+
+=== ATTACK OPPORTUNITIES ===
+
+ssh (Port 22) → Credential Access
+http (Port 80) → Web Enumeration
+
+=== ATTACK CHAINS ===
+
+Web Enumeration → Credential Discovery → SSH Access [Severity: High]

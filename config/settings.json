@@ -1,0 +1,11 @@
+{
+    "scan_arguments": "-sV -Pn -T4",
+    "report_directory": "reports/",
+    "log_directory": "logs/",
+    "risk_threshold": 7,
+    "enable_cve_mapping": true,
+    "enable_attack_chains": true,
+    "enable_json_export": true,
+    "enable_visualization": true
+}
+
